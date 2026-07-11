@@ -6,7 +6,7 @@ dotenv.config();
 
 const AuthContext = createContext();
 
-const API_URL = process.env.VITE_URL;
+const API_URL = process.env.VITE_URL_BACKEND;
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
