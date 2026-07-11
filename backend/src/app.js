@@ -14,6 +14,8 @@ dotenv.config();
 // Connect to Database
 connectDB();
 
+const app = express();
+
 app.use(
     cors(
     {
@@ -21,7 +23,6 @@ app.use(
     }
 ))
 
-const app = express();
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
