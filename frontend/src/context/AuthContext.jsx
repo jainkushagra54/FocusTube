@@ -1,9 +1,12 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const AuthContext = createContext();
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = process.env.VITE_URL;
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
