@@ -1,10 +1,9 @@
 import React, { createContext, useState, useContext, useCallback } from 'react';
 import axios from 'axios';
-import dotenv from "dotenv"
 
 const CourseContext = createContext();
 
-const API_URL = process.env.VITE_URL_BACKEND;
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const CourseProvider = ({ children }) => {
   const [enrollments, setEnrollments] = useState([]);
